@@ -9,7 +9,7 @@
   "repositories": [
     {
       "name": "wdk-capability-audit",
-      "url": "github.com/FlashyLabs/wdk-capability-audit",
+      "url": "github.com/AgenteLabs/wdk-capability-audit",
       "default": true,
       "holds": [
         "tooling",

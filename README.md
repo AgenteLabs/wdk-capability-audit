@@ -11,9 +11,9 @@
 
 A capability audit for wallets built on [Tether's WDK](https://github.com/tetherto/wdk). It scans a project's `node_modules` for every installed `@tetherto/wdk-*` package, reads what each one declares about the chains it supports, and classifies each chain as **mainnet**, **testnet**, or **unknown** — against a small, hand-maintained registry, never a guess.
 
-[![tests](https://github.com/FlashyLabs/wdk-capability-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/FlashyLabs/wdk-capability-audit/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/FlashyLabs/wdk-capability-audit/actions/workflows/codeql.yml/badge.svg)](https://github.com/FlashyLabs/wdk-capability-audit/actions/workflows/codeql.yml)
-[![Scorecard](https://github.com/FlashyLabs/wdk-capability-audit/actions/workflows/scorecard.yml/badge.svg)](https://github.com/FlashyLabs/wdk-capability-audit/security/code-scanning)
+[![tests](https://github.com/AgenteLabs/wdk-capability-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/AgenteLabs/wdk-capability-audit/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/AgenteLabs/wdk-capability-audit/actions/workflows/codeql.yml/badge.svg)](https://github.com/AgenteLabs/wdk-capability-audit/actions/workflows/codeql.yml)
+[![Scorecard](https://github.com/AgenteLabs/wdk-capability-audit/actions/workflows/scorecard.yml/badge.svg)](https://github.com/AgenteLabs/wdk-capability-audit/security/code-scanning)
 [![npm version](https://img.shields.io/npm/v/@flashyfinancial/wdk-capability-audit.svg)](https://www.npmjs.com/package/@flashyfinancial/wdk-capability-audit)
 [![npm downloads](https://img.shields.io/npm/dm/@flashyfinancial/wdk-capability-audit.svg)](https://www.npmjs.com/package/@flashyfinancial/wdk-capability-audit)
 [![license](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)
@@ -193,4 +193,4 @@ No prize, no token. An audit tool has enough unverifiable claims in the world al
 
 ---
 
-Built by [Flashy Labs](https://flashyos.com), the mesh platform for organisations' agents. If something here is broken, unclear, or just interesting, [open an issue](https://github.com/FlashyLabs/wdk-capability-audit/issues) — we read them.
+Built by [Flashy Labs](https://flashyos.com), the mesh platform for organisations' agents. If something here is broken, unclear, or just interesting, [open an issue](https://github.com/AgenteLabs/wdk-capability-audit/issues) — we read them.

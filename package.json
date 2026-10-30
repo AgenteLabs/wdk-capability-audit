@@ -44,11 +44,11 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FlashyLabs/wdk-capability-audit.git"
+    "url": "git+https://github.com/AgenteLabs/wdk-capability-audit.git"
   },
-  "homepage": "https://github.com/FlashyLabs/wdk-capability-audit#readme",
+  "homepage": "https://github.com/AgenteLabs/wdk-capability-audit#readme",
   "bugs": {
-    "url": "https://github.com/FlashyLabs/wdk-capability-audit/issues"
+    "url": "https://github.com/AgenteLabs/wdk-capability-audit/issues"
   },
   "engines": {
     "node": ">=20"

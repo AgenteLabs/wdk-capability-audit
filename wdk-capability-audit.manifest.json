@@ -1,9 +1,9 @@
 {
   "contract": "wdk-capability-audit-manifest/1",
-  "name": "@flashylabs/wdk-capability-audit",
+  "name": "@flashyfinancial/wdk-capability-audit",
   "module": {
-    "package": "@flashylabs/wdk-capability-audit",
-    "version": "0.1.0"
+    "package": "@flashyfinancial/wdk-capability-audit",
+    "version": "0.2.0"
   },
   "reportContract": "wdk-capability-audit-report/1",
   "inspectionStatuses": [

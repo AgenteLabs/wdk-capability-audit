@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/FlashyLabs/wdk-capability-audit/blob/main/schema/report.schema.json",
   "title": "wdk-capability-audit report",
-  "description": "The machine-readable report produced by @flashylabs/wdk-capability-audit. See README.md and src/report.js. `summary` is always derived from `packages` by buildReport() — a conformant producer must never accept a caller-supplied summary that disagrees with it.",
+  "description": "The machine-readable report produced by @flashyfinancial/wdk-capability-audit. See README.md and src/report.js. `summary` is always derived from `packages` by buildReport() — a conformant producer must never accept a caller-supplied summary that disagrees with it.",
   "type": "object",
   "required": ["contract", "tool", "generatedAt", "dir", "packages", "summary"],
   "additionalProperties": false,
@@ -15,7 +15,7 @@
       "required": ["name", "version"],
       "additionalProperties": false,
       "properties": {
-        "name": { "type": "string", "const": "@flashylabs/wdk-capability-audit" },
+        "name": { "type": "string", "const": "@flashyfinancial/wdk-capability-audit" },
         "version": { "type": "string" }
       }
     },

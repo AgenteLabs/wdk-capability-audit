@@ -15,7 +15,7 @@ export function build() {
   const pkg = JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf8'))
   return {
     contract: 'wdk-capability-audit-manifest/1',
-    name: '@flashylabs/wdk-capability-audit',
+    name: '@flashyfinancial/wdk-capability-audit',
     module: { package: pkg.name, version: pkg.version },
     reportContract: REPORT_CONTRACT,
     inspectionStatuses: INSPECTION_STATUSES,

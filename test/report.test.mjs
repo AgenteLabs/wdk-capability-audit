@@ -36,7 +36,7 @@ test('buildReport(): sets the report contract', () => {
 
 test('buildReport(): tool name/version come from this package\'s own package.json', () => {
   const report = buildReport({ dir: '/x', packages: [] })
-  assert.equal(report.tool.name, '@flashylabs/wdk-capability-audit')
+  assert.equal(report.tool.name, '@flashyfinancial/wdk-capability-audit')
   assert.equal(typeof report.tool.version, 'string')
 })
 

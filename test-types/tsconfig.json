@@ -8,7 +8,7 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@flashylabs/wdk-capability-audit": ["../dist/index.d.ts"]
+      "@flashyfinancial/wdk-capability-audit": ["../dist/index.d.ts"]
     }
   },
   "include": ["consumer.ts"]

@@ -1,12 +1,15 @@
-# @flashylabs/wdk-capability-audit
+# @flashyfinancial/wdk-capability-audit
 
 A read-only capability audit for wallets built on Tether's WDK. It scans a
 project's `node_modules` for every installed `@tetherto/wdk-*` package, reads
 what each declares about the chains it supports, and classifies each chain as
 **mainnet**, **testnet**, or **unknown** against a small hand-maintained
-registry — never a guess. Published on npm at `0.1.0`. Apache-2.0 (holder
-Flashy Labs); the estate register in flashyos `tools/estate-licences.mjs` is the
-authority.
+registry — never a guess. Published on npm at `0.2.0`, as
+`@flashyfinancial/wdk-capability-audit` — finance packages in this estate moved
+to the FlashyFinancial scope; the old `@flashylabs/wdk-capability-audit` name is
+deprecated on the registry once a human runs `deprecate-old-scope.yml`, never
+automatically. Apache-2.0 (holder Flashy Labs); the estate register in
+flashyos `tools/estate-licences.mjs` is the authority.
 
 ## ⚠️ Known limitation — the central assumption is unverified
 

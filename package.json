@@ -1,8 +1,11 @@
 {
-  "name": "@flashylabs/wdk-capability-audit",
-  "version": "0.1.0",
+  "name": "@flashyfinancial/wdk-capability-audit",
+  "version": "0.2.0",
   "description": "Scan a project's node_modules for installed @tetherto/wdk-* packages and report what chains each declares — mainnet, testnet, or unknown, against a small hand-maintained registry of chain identifiers this package is confident are real. Never guesses at a chain it doesn't recognize, and refuses rather than emitting an empty report that looks clean.",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./src/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
@@ -15,7 +18,7 @@
     }
   },
   "scripts": {
-    "test": "node --test test/audit.test.mjs test/cli.test.mjs test/discover.test.mjs test/faucets.test.mjs test/inspect.test.mjs test/known-limitation.test.mjs test/manifest.test.mjs test/registry.test.mjs test/report.test.mjs test/schema-validate.test.mjs test/strike.test.mjs test/test-script.test.mjs test/workflow-pins.test.mjs",
+    "test": "node --test test/audit.test.mjs test/cli.test.mjs test/discover.test.mjs test/faucets.test.mjs test/inspect.test.mjs test/known-limitation.test.mjs test/manifest.test.mjs test/package-scope.test.mjs test/registry.test.mjs test/report.test.mjs test/schema-validate.test.mjs test/strike.test.mjs test/test-script.test.mjs test/workflow-pins.test.mjs",
     "manifest": "node src/manifest.js --write",
     "check": "node src/manifest.js --check",
     "version": "npm run manifest && git add wdk-capability-audit.manifest.json",

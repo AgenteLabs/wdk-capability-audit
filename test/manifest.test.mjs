@@ -26,5 +26,5 @@ test('build(): reportContract, classifications, inspectionStatuses and chainRegi
 test('build(): contract id and module name', () => {
   const doc = build()
   assert.equal(doc.contract, 'wdk-capability-audit-manifest/1')
-  assert.equal(doc.module.package, '@flashylabs/wdk-capability-audit')
+  assert.equal(doc.module.package, '@flashyfinancial/wdk-capability-audit')
 })

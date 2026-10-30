@@ -13,7 +13,7 @@ A clear description of what you expected `auditDirectory()` (or the CLI) to repo
 **Minimal reproduction**
 
 ```js
-import { auditDirectory } from '@flashylabs/wdk-capability-audit'
+import { auditDirectory } from '@flashyfinancial/wdk-capability-audit'
 
 const report = auditDirectory('/path/to/project')
 console.log(report)
@@ -25,7 +25,7 @@ If you can, include the `package.json` of the `@tetherto/wdk-*` package that pro
 
 **Package version**
 
-Output of `npm ls @flashylabs/wdk-capability-audit`.
+Output of `npm ls @flashyfinancial/wdk-capability-audit`.
 
 **Environment**
 

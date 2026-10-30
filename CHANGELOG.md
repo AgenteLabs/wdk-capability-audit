@@ -2,6 +2,20 @@
 
 All notable changes to this project are documented here. Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## 0.2.0 — 2026-10-30
+
+**Changed:** the npm scope moved — this package now publishes as
+[`@flashyfinancial/wdk-capability-audit`](https://www.npmjs.com/package/@flashyfinancial/wdk-capability-audit),
+not `@flashylabs/wdk-capability-audit`. Every import in this README, the shipped
+schema, the generated manifest, and the publish workflow moved with it. **This
+is a breaking change for anyone with the old name pinned** — run
+`npm install @flashyfinancial/wdk-capability-audit` and update the import path;
+nothing about the package's behaviour, exports, or report contract changed.
+The old name is not removed from the registry: a maintainer can run the new
+`Deprecate old npm scope` workflow (`workflow_dispatch` only, never on a push
+or a schedule) to mark it with `npm deprecate`, pointing anyone who installs
+it at the new scope.
+
 ## 0.1.0 — 2026-09-22
 
 Initial public release.

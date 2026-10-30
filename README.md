@@ -1,4 +1,4 @@
-# @flashylabs/wdk-capability-audit
+# @flashyfinancial/wdk-capability-audit
 
 ```
         ██
@@ -14,8 +14,8 @@ A capability audit for wallets built on [Tether's WDK](https://github.com/tether
 [![tests](https://github.com/FlashyLabs/wdk-capability-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/FlashyLabs/wdk-capability-audit/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/FlashyLabs/wdk-capability-audit/actions/workflows/codeql.yml/badge.svg)](https://github.com/FlashyLabs/wdk-capability-audit/actions/workflows/codeql.yml)
 [![Scorecard](https://github.com/FlashyLabs/wdk-capability-audit/actions/workflows/scorecard.yml/badge.svg)](https://github.com/FlashyLabs/wdk-capability-audit/security/code-scanning)
-[![npm version](https://img.shields.io/npm/v/@flashylabs/wdk-capability-audit.svg)](https://www.npmjs.com/package/@flashylabs/wdk-capability-audit)
-[![npm downloads](https://img.shields.io/npm/dm/@flashylabs/wdk-capability-audit.svg)](https://www.npmjs.com/package/@flashylabs/wdk-capability-audit)
+[![npm version](https://img.shields.io/npm/v/@flashyfinancial/wdk-capability-audit.svg)](https://www.npmjs.com/package/@flashyfinancial/wdk-capability-audit)
+[![npm downloads](https://img.shields.io/npm/dm/@flashyfinancial/wdk-capability-audit.svg)](https://www.npmjs.com/package/@flashyfinancial/wdk-capability-audit)
 [![license](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)
 [![node](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](https://nodejs.org)
 
@@ -36,7 +36,7 @@ This package turns that manual check into something that runs the same way every
 ## Install
 
 ```bash
-npm install --save-dev @flashylabs/wdk-capability-audit
+npm install --save-dev @flashyfinancial/wdk-capability-audit
 ```
 
 ## Quickstart
@@ -50,7 +50,7 @@ npx wdk-capability-audit --json          # the full wdk-capability-audit-report/
 Or use it as a library:
 
 ```js
-import { auditDirectory, validateReport } from '@flashylabs/wdk-capability-audit'
+import { auditDirectory, validateReport } from '@flashyfinancial/wdk-capability-audit'
 
 const report = auditDirectory('/path/to/project')
 console.log(report.summary)
@@ -68,7 +68,7 @@ The primary product is the JSON report, not the table — `--json` emits a docum
 ```json
 {
   "contract": "wdk-capability-audit-report/1",
-  "tool": { "name": "@flashylabs/wdk-capability-audit", "version": "0.1.0" },
+  "tool": { "name": "@flashyfinancial/wdk-capability-audit", "version": "0.2.0" },
   "generatedAt": "2026-09-22T12:00:00.000Z",
   "dir": "/path/to/project",
   "packages": [
@@ -140,7 +140,9 @@ npx wdk-capability-audit --faucets
 
 ## Status
 
-Pre-1.0 (`0.1.0`). Read this section before trusting a report against anything that matters.
+Pre-1.0 (`0.2.0`). Read this section before trusting a report against anything that matters.
+
+**The npm scope changed at `0.2.0`.** This package now publishes as `@flashyfinancial/wdk-capability-audit` — finance packages in this estate moved to the FlashyFinancial scope. `@flashylabs/wdk-capability-audit` will receive no further releases and is deprecated on the registry once a human with publish rights runs `deprecate-old-scope.yml`; update your import and your `package.json` dependency to the new name.
 
 **The chain-inspection convention is an explicit, unverified assumption.** `inspectModule()` looks for a package's chains at `wdk.chains` inside its own `package.json` — a plain object keyed by a chain label, each entry shaped `{ "namespace": "evm", "id": 1 }`. **This convention has not been observed in a real, published `@tetherto/wdk-*` package.** While building this tool, six real packages were inspected directly on the development machine — `@tetherto/wdk` (`1.0.0-beta.18`), `wdk-wallet` (`1.0.0-beta.19`), `wdk-wallet-evm` (`1.0.0-beta.19`), `wdk-wallet-evm-erc-4337` (`1.0.0-beta.20`), `wdk-wallet-tron` (`1.0.0-beta.13`), and `wdk-failover-provider` (`1.0.0-beta.2`) — and **none of them declares a `wdk.chains` field, or any static chain/network configuration, in `package.json`.** Chain configuration in those packages is supplied by the *integrating application* at runtime — e.g. `wdk.registerWallet('evm', WalletManagerEvm, { chainId: 84532, provider })` — not published by the package itself as static, statically-readable data.
 

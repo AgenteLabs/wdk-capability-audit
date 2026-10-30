@@ -16,7 +16,7 @@ import {
   INSPECTION_STATUSES,
   CLASSIFICATIONS,
   CHAIN_REGISTRY_VERSION,
-} from '@flashylabs/wdk-capability-audit'
+} from '@flashyfinancial/wdk-capability-audit'
 
 const found = discoverWdkPackages('/some/dir')
 const first = found[0]
